@@ -1,1 +1,3 @@
-SiddharthMundra.github.io/sp24-cse110-lab3
+#Lab2 starter
+
+https://SiddharthMundra.github.io/sp24-cse110-lab3

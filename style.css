@@ -18,7 +18,8 @@ body {
 /* Header styling */
 h1 {
     color: #FFF; /* Color using hex code */
-    position:fixed /* Static positioning */
+    position: absolute; /* Absolute positioning */
+    margin-left: 70%;
 }
 
 h2 {
@@ -28,14 +29,14 @@ h2 {
 
 h3 {
     color: color-mix(in srgb, red 50%, blue 50%); /* Color mixing */
-    position: absolute; /* Absolute positioning */
+    position: sticky; /* Absolute positioning */
     top: 10px;
-    left: 20px;
+
 }
 
 span {
     color: rgba(0,0,1,0.2); /* Color using RGBA */
-    position: sticky; /* Sticky positioning */
+    position:static; /* Sticky positioning */
     top: 0;
 }
 
@@ -56,6 +57,10 @@ header, footer, main {
     padding: 1.2rem 2rem; /* Shorthand padding */
     max-width: 1200px; /* Max width */
     min-width: 300px; /* Min width */
+}
+
+details {
+    margin-top: 12%;
 }
 
 ul {

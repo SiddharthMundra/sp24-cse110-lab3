@@ -3,13 +3,13 @@
 ## Date: 4/23/2024
 
 ### Attendees:
-- [Sid]
-- [Ryan]
+- Sid
+- Ryan
 
 ### Agenda:
 1. **What did I work on yesterday?**
-   - [Sid]: [GTA 6 marketing]
-   - [Ryan]: [GTA 6 code]
+   - Sid: GTA 6 marketing
+   - Ryan: GTA 6 code
 
 
 2. **What will I work on today?**
@@ -20,8 +20,7 @@
    - Sid: Nope
    - Ryan: Hackers trying to get source code
 
-### Notes:
-- [Additional notes, announcements, or information discussed during the meeting]
+### Notes (Additional notes, announcements, or information discussed during the meeting):
 - None.
 
 ### Next Meeting:

@@ -18,7 +18,7 @@ body {
 /* Header styling */
 h1 {
     color: #FFF; /* Color using hex code */
-    position: static; /* Static positioning */
+    position:fixed /* Static positioning */
 }
 
 h2 {

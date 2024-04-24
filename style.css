@@ -5,7 +5,7 @@
     --text-color: var(--undefined-var, rgb(60,60,60)); 
 }
 
-/* Basic styling with Google Fonts */
+/* Styling with Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
     background-color: cadetblue; /* Background color */
@@ -45,7 +45,6 @@ span {
     top: 0;
 }
 
-/* Using CSS variable with fallback for header background */
 header {
     background-color: var(--primary-color, green);
     position: fixed; /* Fixed positioning */
@@ -69,7 +68,7 @@ details {
 }
 
 ul {
-    margin-left: 5px; /* Longhand margin */
+    margin-left: 5px; 
 }
 
 div article {
@@ -103,7 +102,7 @@ h1 ~ h2 {
 
 
 
-/* Media query for responsiveness */
+/* Media query */
 @media (max-width: 768px) {
     body {
         background-color: hsl(240, 100%, 50%); 

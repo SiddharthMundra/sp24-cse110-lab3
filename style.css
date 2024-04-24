@@ -1,0 +1,142 @@
+/* Root definitions*/
+:root {
+    --primary-color: rgba(0,0,0,0.08);
+    --fallback-color: hsl(202, 87%, 54%);
+    --secondary-color: orange; 
+}
+
+/* Body */
+body {
+    background-color: cadetblue;
+    color: rgb(60,60,60);
+    font-family: 'Open Sans', sans-serif; 
+}
+
+/* Header colors */
+h1 {
+    color: #FFF; /* Hex code usage */
+}
+
+h2 {
+    color: #2874d5; /* Hex code usage */
+}
+
+h3 {
+    color: color-mix(in srgb, red 50%, blue 50%); /* Color mixing */
+}
+
+span {
+    color: rgba(0,0,1,0.2);
+}
+
+/* Styling using CSS variables with fallback */
+header {
+    background-color: var(--primary-color, green);
+}
+
+footer {
+    background-color: rgba(0,0,0,0.08);
+}
+
+/* Box model adjustments */
+header, footer, main {
+    padding: 1.2rem 2rem; /* Corrected padding syntax */
+}
+
+nav {
+    width: 80%;
+    display: flex; /* Applying flex display */
+    justify-content: space-between; /* Flexbox properties */
+}
+
+ul {
+    margin-left: 5px;
+    padding: 0; /* Removing default padding */
+    list-style-type: none; /* Removing list style */
+}
+
+fieldset {
+    padding: 2rem;
+}
+
+article {
+    margin: 2rem 1rem; /* Corrected margin syntax */
+}
+
+/* Positioning elements */
+article {
+    position: relative; /* Position property */
+}
+
+nav {
+    position: sticky;
+    top: 0; /* Sticky positioning */
+}
+
+/* Sizing elements */
+video, audio {
+    max-width: 100%;
+    height: auto; /* Responsive media elements */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        background-color: var(--secondary-color); /* Change background color on smaller screens */
+    }
+
+    nav {
+        flex-direction: column; /* Adjusting flexbox layout on smaller screens */
+    }
+}
+
+/* Pseudo-classes and advanced selectors */
+a:hover {
+    text-decoration: underline; /* Hover effect */
+}
+
+a:active {
+    color: var(--fallback-color); /* Active link color */
+}
+
+/* Using CSS grid for layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    gap: 20px;
+}
+
+/* Combinator usage */
+section > h2 {
+    color: darkred; /* Child selector */
+}
+
+ul + p {
+    border-top: 2px dashed gray; /* Adjacent sibling combinator */
+}
+
+/* Advanced CSS selectors */
+* {
+    box-sizing: border-box; /* Universal selector applying box-sizing */
+}
+
+input[type="text"] {
+    border: 1px solid #ccc; /* Attribute selector */
+}
+
+p:has(> strong) {
+    background-color: yellow; /* New :has() selector */
+}
+
+/* Nested selectors demonstration */
+nav li a {
+    color: #ffffff; /* Descendant combinator */
+}
+
+/* Incorporating transformations */
+h1 {
+    transform: rotate(-5deg); /* Text rotation */
+}
+
+/* Adding inline styles and <style> block example */
+/* Inline style: <p style="color: red;">This is an inline styled paragraph.</p> */

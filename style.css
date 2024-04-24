@@ -34,14 +34,14 @@ h2 {
 
 h3 {
     color: color-mix(in srgb, red 50%, blue 50%); /* Color mixing */
-    position: sticky; /* Absolute positioning */
+    position: sticky; 
     top: 10px;
 
 }
 
 span {
     color: rgba(0,0,1,0.2); /* Color using RGBA */
-    position:static; /* Sticky positioning */
+    position:static; 
     top: 0;
 }
 

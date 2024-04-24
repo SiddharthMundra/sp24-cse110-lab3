@@ -2,7 +2,7 @@
 :root {
     --primary-color: rgba(0,0,0,0.08);
     --fallback-color: hsl(202, 87%, 54%);
-    --text-color: rgb(60,60,60); /* RGB color */
+    --text-color: var(--undefined-var, rgb(60,60,60)); 
 }
 
 /* Basic styling with Google Fonts */
@@ -13,6 +13,11 @@ body {
     font-family: 'Roboto', sans-serif; /* Google Font */
     margin: 0; /* Zero out the margin */
     padding: 0; /* Zero out the padding */
+}
+
+.example {
+    margin: 5vh 10px 2% 1cm; /* Mixing relative (vh, %) and absolute units (px, cm) */
+    padding: 10em 100pt 3in 50mm; /* Mixing relative (em) and absolute units (pt, in, mm) */
 }
 
 /* Header styling */
@@ -67,6 +72,11 @@ ul {
     margin-left: 5px; /* Longhand margin */
 }
 
+div article {
+    color: darkgrey;
+}
+
+
 /* Border properties */
 article {
     border-style: solid; /* Border style */
@@ -86,6 +96,12 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Grid layout for main content */
 }
+
+h1 ~ h2 {
+    margin-top: 20px;
+}
+
+
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {

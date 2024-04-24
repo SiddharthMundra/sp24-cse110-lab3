@@ -16,14 +16,14 @@ body {
 }
 
 .example {
-    margin: 5vh 10px 2% 1cm; /* Mixing relative (vh, %) and absolute units (px, cm) */
-    padding: 10em 100pt 3in 50mm; /* Mixing relative (em) and absolute units (pt, in, mm) */
+    margin: 5vh 10px 2% 1cm; 
+    padding: 10em 100pt 3in 50mm; 
 }
 
 /* Header styling */
 h1 {
-    color: #FFF; /* Color using hex code */
-    position: absolute; /* Absolute positioning */
+    color: #FFF; 
+    position: absolute; 
     margin-left: 70%;
 }
 
@@ -59,7 +59,7 @@ footer {
 
 /* Box model - margins and padding */
 header, footer, main {
-    padding: 1.2rem 2rem; /* Shorthand padding */
+    padding: 1.2rem 2rem;
     max-width: 1200px; /* Max width */
     min-width: 300px; /* Min width */
 }
@@ -88,13 +88,13 @@ article {
 /* Flexbox layout */
 nav {
     display: flex;
-    justify-content: space-between; /* Flexbox for navigation */
+    justify-content: space-between; 
 }
 
 /* Grid layout */
 main {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Grid layout for main content */
+    grid-template-columns: repeat(2, 1fr); /*  main content */
 }
 
 h1 ~ h2 {
@@ -106,7 +106,7 @@ h1 ~ h2 {
 /* Media query for responsiveness */
 @media (max-width: 768px) {
     body {
-        background-color: hsl(240, 100%, 50%); /* HSL color on smaller screens */
+        background-color: hsl(240, 100%, 50%); 
     }
 }
 
@@ -130,11 +130,11 @@ ul + p {
 
 /* New :has() selector */
 p:has(> strong) {
-    background-color: yellow; /* Background color for p elements containing strong */
+    background-color: yellow; 
 }
 
 /* Nested selectors example */
 nav ul li a {
-    text-decoration: none; /* Removing default text decoration */
-    color: white; /* White text color for navigation links */
+    text-decoration: none; 
+    color: white; 
 }

@@ -1,142 +1,119 @@
-/* Root definitions*/
+/* CSS variables with fallback */
 :root {
     --primary-color: rgba(0,0,0,0.08);
     --fallback-color: hsl(202, 87%, 54%);
-    --secondary-color: orange; 
+    --text-color: rgb(60,60,60); /* RGB color */
 }
 
-/* Body */
+/* Basic styling with Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
-    background-color: cadetblue;
-    color: rgb(60,60,60);
-    font-family: 'Open Sans', sans-serif; 
+    background-color: cadetblue; /* Background color */
+    color: var(--text-color); /* Using CSS variable for text color */
+    font-family: 'Roboto', sans-serif; /* Google Font */
+    margin: 0; /* Zero out the margin */
+    padding: 0; /* Zero out the padding */
 }
 
-/* Header colors */
+/* Header styling */
 h1 {
-    color: #FFF; /* Hex code usage */
+    color: #FFF; /* Color using hex code */
+    position: static; /* Static positioning */
 }
 
 h2 {
-    color: #2874d5; /* Hex code usage */
+    color: #2874d5; /* Color using hex code */
+    position: relative; /* Relative positioning */
 }
 
 h3 {
     color: color-mix(in srgb, red 50%, blue 50%); /* Color mixing */
+    position: absolute; /* Absolute positioning */
+    top: 10px;
+    left: 20px;
 }
 
 span {
-    color: rgba(0,0,1,0.2);
+    color: rgba(0,0,1,0.2); /* Color using RGBA */
+    position: sticky; /* Sticky positioning */
+    top: 0;
 }
 
-/* Styling using CSS variables with fallback */
+/* Using CSS variable with fallback for header background */
 header {
     background-color: var(--primary-color, green);
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    width: 100%;
 }
 
 footer {
-    background-color: rgba(0,0,0,0.08);
+    background-color: rgba(0,0,0,0.08); /* Footer background color using RGBA */
 }
 
-/* Box model adjustments */
+/* Box model - margins and padding */
 header, footer, main {
-    padding: 1.2rem 2rem; /* Corrected padding syntax */
-}
-
-nav {
-    width: 80%;
-    display: flex; /* Applying flex display */
-    justify-content: space-between; /* Flexbox properties */
+    padding: 1.2rem 2rem; /* Shorthand padding */
+    max-width: 1200px; /* Max width */
+    min-width: 300px; /* Min width */
 }
 
 ul {
-    margin-left: 5px;
-    padding: 0; /* Removing default padding */
-    list-style-type: none; /* Removing list style */
+    margin-left: 5px; /* Longhand margin */
 }
 
-fieldset {
-    padding: 2rem;
-}
-
+/* Border properties */
 article {
-    margin: 2rem 1rem; /* Corrected margin syntax */
+    border-style: solid; /* Border style */
+    border-color: #000; /* Border color */
+    border-width: 2px; /* Border width */
+    border-radius: 5px; /* Border radius */
 }
 
-/* Positioning elements */
-article {
-    position: relative; /* Position property */
-}
-
+/* Flexbox layout */
 nav {
-    position: sticky;
-    top: 0; /* Sticky positioning */
+    display: flex;
+    justify-content: space-between; /* Flexbox for navigation */
 }
 
-/* Sizing elements */
-video, audio {
-    max-width: 100%;
-    height: auto; /* Responsive media elements */
+/* Grid layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Grid layout for main content */
 }
 
-/* Responsive design */
+/* Media query for responsiveness */
 @media (max-width: 768px) {
     body {
-        background-color: var(--secondary-color); /* Change background color on smaller screens */
-    }
-
-    nav {
-        flex-direction: column; /* Adjusting flexbox layout on smaller screens */
+        background-color: hsl(240, 100%, 50%); /* HSL color on smaller screens */
     }
 }
 
-/* Pseudo-classes and advanced selectors */
+/* Pseudo-classes */
 a:hover {
-    text-decoration: underline; /* Hover effect */
+    color: darkred; /* Hover effect for links */
 }
 
 a:active {
-    color: var(--fallback-color); /* Active link color */
+    color: darkblue; /* Active state for links */
 }
 
-/* Using CSS grid for layout */
-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
-    gap: 20px;
-}
-
-/* Combinator usage */
+/* Combinators */
 section > h2 {
-    color: darkred; /* Child selector */
+    color: darkred; /* Direct child combinator */
 }
 
 ul + p {
     border-top: 2px dashed gray; /* Adjacent sibling combinator */
 }
 
-/* Advanced CSS selectors */
-* {
-    box-sizing: border-box; /* Universal selector applying box-sizing */
-}
-
-input[type="text"] {
-    border: 1px solid #ccc; /* Attribute selector */
-}
-
+/* New :has() selector */
 p:has(> strong) {
-    background-color: yellow; /* New :has() selector */
+    background-color: yellow; /* Background color for p elements containing strong */
 }
 
-/* Nested selectors demonstration */
-nav li a {
-    color: #ffffff; /* Descendant combinator */
+/* Nested selectors example */
+nav ul li a {
+    text-decoration: none; /* Removing default text decoration */
+    color: white; /* White text color for navigation links */
 }
-
-/* Incorporating transformations */
-h1 {
-    transform: rotate(-5deg); /* Text rotation */
-}
-
-/* Adding inline styles and <style> block example */
-/* Inline style: <p style="color: red;">This is an inline styled paragraph.</p> */

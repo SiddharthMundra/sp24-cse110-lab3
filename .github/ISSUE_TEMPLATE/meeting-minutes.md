@@ -12,10 +12,10 @@ assignees: ''
 ## Meeting Details
 **Title:** [Meeting Title]  
 **Date:** [Date]  
-**Time:** [Start Time] - [End Time]  
+**Time:** [Start Time] - [End Time]
 
 ## Attendees
-- [Name 1]
+- Sid
 - [Name 2]
 - [Name 3]
 

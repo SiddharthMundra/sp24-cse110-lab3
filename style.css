@@ -1,0 +1,119 @@
+/* CSS variables with fallback */
+:root {
+    --primary-color: rgba(0,0,0,0.08);
+    --fallback-color: hsl(202, 87%, 54%);
+    --text-color: rgb(60,60,60); /* RGB color */
+}
+
+/* Basic styling with Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    background-color: cadetblue; /* Background color */
+    color: var(--text-color); /* Using CSS variable for text color */
+    font-family: 'Roboto', sans-serif; /* Google Font */
+    margin: 0; /* Zero out the margin */
+    padding: 0; /* Zero out the padding */
+}
+
+/* Header styling */
+h1 {
+    color: #FFF; /* Color using hex code */
+    position: static; /* Static positioning */
+}
+
+h2 {
+    color: #2874d5; /* Color using hex code */
+    position: relative; /* Relative positioning */
+}
+
+h3 {
+    color: color-mix(in srgb, red 50%, blue 50%); /* Color mixing */
+    position: absolute; /* Absolute positioning */
+    top: 10px;
+    left: 20px;
+}
+
+span {
+    color: rgba(0,0,1,0.2); /* Color using RGBA */
+    position: sticky; /* Sticky positioning */
+    top: 0;
+}
+
+/* Using CSS variable with fallback for header background */
+header {
+    background-color: var(--primary-color, green);
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    width: 100%;
+}
+
+footer {
+    background-color: rgba(0,0,0,0.08); /* Footer background color using RGBA */
+}
+
+/* Box model - margins and padding */
+header, footer, main {
+    padding: 1.2rem 2rem; /* Shorthand padding */
+    max-width: 1200px; /* Max width */
+    min-width: 300px; /* Min width */
+}
+
+ul {
+    margin-left: 5px; /* Longhand margin */
+}
+
+/* Border properties */
+article {
+    border-style: solid; /* Border style */
+    border-color: #000; /* Border color */
+    border-width: 2px; /* Border width */
+    border-radius: 5px; /* Border radius */
+}
+
+/* Flexbox layout */
+nav {
+    display: flex;
+    justify-content: space-between; /* Flexbox for navigation */
+}
+
+/* Grid layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Grid layout for main content */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    body {
+        background-color: hsl(240, 100%, 50%); /* HSL color on smaller screens */
+    }
+}
+
+/* Pseudo-classes */
+a:hover {
+    color: darkred; /* Hover effect for links */
+}
+
+a:active {
+    color: darkblue; /* Active state for links */
+}
+
+/* Combinators */
+section > h2 {
+    color: darkred; /* Direct child combinator */
+}
+
+ul + p {
+    border-top: 2px dashed gray; /* Adjacent sibling combinator */
+}
+
+/* New :has() selector */
+p:has(> strong) {
+    background-color: yellow; /* Background color for p elements containing strong */
+}
+
+/* Nested selectors example */
+nav ul li a {
+    text-decoration: none; /* Removing default text decoration */
+    color: white; /* White text color for navigation links */
+}
